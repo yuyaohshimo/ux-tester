@@ -1,0 +1,45 @@
+doctype html
+html
+  head
+    meta(name='viewport',content='width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no')
+    meta(name='keywords',content='ux, ui')
+    meta(name='description',content='How do you feel UX?')
+    title UX TESTER PRESENTED BY YUYA OHSHIMO
+    script(type='text/javascript', src='//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js')
+    script(type='text/javascript', src='./js/lib/bootstrap.min.js')
+    script(type='text/javascript', src='./js/lib/bootstrap-modalmanager.js')
+    script(type='text/javascript', src='./js/lib/bootstrap-modal.js')
+    script(type='text/javascript', src='./js/lib/lodash.js')
+    script(type='text/javascript', src='./js/main.js')
+    link(href='./css/main.css', rel='stylesheet')
+    link(href='./css/bootstrap.min.css', rel='stylesheet')
+    link(href='./css/bootstrap-modal-bs3patch.css', rel='stylesheet')
+    link(href='./css/bootstrap-modal.css', rel='stylesheet')
+    block head
+  body
+    // modal
+    div#myModal.modal.fade(data-backdrop='static')
+      div.modal-body
+        h4 Name
+        p
+          input.form-control.ux-name-form(type='text',maxlength='10')
+      div.modal-footer
+        button.btn.btn-primary.ux-name-send(disabled='disabled') send
+    // navigation
+    nav.navbar.navbar-default(role='navigation')
+      div.container-fluid
+        div.navbar-header
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1')
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand(href='#') UX Tester
+        div#bs-example-navbar-collapse-1.collapse.navbar-collapse
+          ul.nav.navbar-nav
+            li
+              a(href='/button') Button
+            li
+              a(href='/list') List
+
+    block content
+block end
